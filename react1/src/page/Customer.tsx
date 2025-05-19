@@ -1,15 +1,10 @@
 import {useState} from "react";
 import * as React from "react";
-
-type Customer = {  // customer type object
-    id1: number;
-    name1: string,
-    age1: number
-}
+import type {Customer} from "../type/Customer.ts";
+import {customerData} from "../data/CustomerData.ts";
 
 
-export default function Home() {
-    const [customers, setCustomers] = useState<Customer[]>([]);  // customer type array
+export default function Customer() {
     const [id, setId] = useState<number>(0);
     const [name, setName] = useState<string>("");
     const [age, setAge] = useState<number>(0);
@@ -24,7 +19,7 @@ export default function Home() {
             age1: age
         };
 
-        setCustomers([...customers,newCustomer]);
+        customerData.push(newCustomer);
 
 
         setId(0);
@@ -99,7 +94,7 @@ export default function Home() {
                             </tr>
                             </thead>
                             <tbody>
-                            {customers.map(customer => (
+                            {customerData.map(customer => (
                                 <tr key={customer.id1}>
                                     <td>{customer.id1}</td>
                                     <td>{customer.name1}</td>

@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 export default function NavBar() {
     const navLinks = [
-        { path: '/home', label: 'Home' },
-        { path: '/projects', label: 'Projects' },
-        { path: '/about', label: 'About' },
-        { path: '/contact', label: 'Contact' }
+        { path: '/customer', label: 'Customer' },
+        { path: '/item', label: 'Item' },
+        { path: '/order', label: 'Order' },
+        { path: '/orderDetail', label: 'Order Detail' }
     ];
 
     return (

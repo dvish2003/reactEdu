@@ -22,7 +22,7 @@ export default function LoginPage() {
             if (admin.password === password) {
                 console.log("Login success")
                 console.log(email,password)
-                navigate("/home")
+                navigate("/customer")
             }else{
                 console.log("Login fail password incorrect")
             }
